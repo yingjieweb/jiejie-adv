@@ -5,11 +5,11 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    deviceType: ''  // pc、mobile
   },
   mutations: {
-  },
-  actions: {
-  },
-  modules: {
+    superviseDevice(state, deviceType) {
+      state.deviceType = deviceType
+    }
   }
 })

@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Layout></Layout>
   </div>
 </template>
+
+<script lang="js">
+  import Layout from "@/views/layout/Layout"
+
+  export default {
+    name: 'App',
+    components: {
+      Layout
+    }
+  }
+</script>
 
 <style lang="scss">
   @import "~@/assets/styles/reset.scss";

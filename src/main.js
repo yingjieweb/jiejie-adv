@@ -10,3 +10,10 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app')
+
+//监测视口断度 - 准备手机端适配
+if (document.documentElement.clientWidth > 500) {
+  store.commit('superviseDevice', 'pc')
+} else {
+  store.commit('superviseDevice', 'mobile')
+}
